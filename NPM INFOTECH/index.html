@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>
+
+    </title>
+    <style>
+        .body {
+            font-size: 4;
+            font-family: Georgia;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #e47373ce;
+            overflow: auto;
+        }
+
+        .navbar a {
+            float: left;
+            text-align: center;
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Navbar links on mouse-over */
+        .navbar a:hover {
+            background-color: #000;
+        }
+
+        .active {
+            background-color: #be4848ce;
+        }
+
+        /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+        @media screen and (max-width: 500px) {
+            .navbar a {
+                float: none;
+                display: block;
+            }
+        }
+
+
+        .card2 {
+            width: 20%;
+            height: 74%;
+            float: left;
+            border-radius: 5px;
+            margin: 30px;
+            padding-top: 1%;
+            transition: 0.s ease;
+            cursor: pointer;
+        }
+
+        .card2:hover {
+            transform;
+            : :scale(5, 5);
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .image2 img {
+            width: 100%;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+
+
+
+        .bord2 {
+            border: solid 1px;
+        }
+
+        .intern2 {
+            padding: 10px;
+
+            text-align: center;
+            font-size: larger;
+        }
+
+        h4 {
+            color: rgb(48, 48, 85);
+        }
+
+        h4:hover {
+            background-color: rgba(211, 170, 172, 0.897);
+            color: rgb(146, 32, 32);
+        }
+    </style>
+</head>
+
+<body>
+    <!--header-->
+    <div class="navbar" style="position: fixed;">
+        <a class="active"> Photogallery</a>
+        <a href="#div1"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#div2"><i class="glyphicon glyphicon-user"></i> About us</a>
+        <a href="#div3"><i class="glyphicon glyphicon-picture"></i> Gallery</a>
+        <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+        <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="file:///C:/Users/HP/Desktop/NPM%20INFOTECH/login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+    </div>
+    <!--header stop-->
+
+    <br>
+    <br<br><br><br><br>
+
+        <!--home-->
+        <div id="div1">
+
+            <h1 style="color: #be4848ce;">
+                <center><b>PHOTOGALLERY</b></center>
+            </h1>
+            <img class="fas fa-car-side fa-3x"
+                style="margin: 50px; margin-top: 10px; margin-left: 80px; float: left; height: 250px; width: 300px;"
+                src="data:image/jpeg;base64,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">
+            <font size='4' face='georgia'>
+                <p style="text-align: justify; margin: 60px; margin-top: 32px; font-size: 20px;">
+                    &emsp;&emsp;A photography website is an online domain where you can host your high quality
+                    photography in photo
+                    galleries. By
+                    using a professional site to showcase your best images, you are able to effectively present yourself
+                    as a reliable
+                    photographer who clients will be begging to hire. When you make your photography website, you have
+                    access to
+                    customization options that allow you to design your website exactly as you want it to be, so you’re
+                    never forced
+                    to crop your images or otherwise sacrifice the quality of your work. With a website builder,
+                    photographers can
+                    create a standout portfolio that complements their images in a matter of minutes, with no coding or
+                    web
+                    development skills required.
+                </p>
+            </font>
+        </div>
+
+        <br>
+
+        <!--about us-->
+        <div id="div2">
+
+            <h1 style="color: #be4848ce;">
+                <center><b>ABOUT PHOTOGALLERY</b></center>
+            </h1>
+            <div style="margin-left: 28px; float: left; width: 800px;">
+                <font size='4' face='georgia'>
+                    <p style="text-align: justify; margin: 60px; margin-top: 32px; font-size: 20px;">
+                        &emsp;&emsp;A photography website is an online domain where you can host your high quality
+                        photography in photo
+                        galleries. By
+                        using a professional site to showcase your best images, you are able to effectively present
+                        yourself as a reliable
+                        photographer who clients will be begging to hire. When you make your photography website, you
+                        have access to
+                        customization options that allow you to design your website exactly as you want it to be, so
+                        you’re never forced
+                        to crop your images or otherwise sacrifice the quality of your work. With a website builder,
+                        photographers can
+                        create a standout portfolio that complements their images in a matter of minutes, with no coding
+                        or web
+                        development skills required.
+                    </p>
+                </font>
+            </div>
+            <img class="fas fa-car-side fa-3x" style="margin: 40px;  float: left; height: 380px; width: 350px;"
+                src="https://i.pinimg.com/236x/cf/67/f5/cf67f554618d63756e47d0c1548c1aba.jpg">
+        </div>
+
+        <br><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+
+
+
+
+        <!--gallery-->
+        <div id="div3">
+
+            <h1 style="color: #be4848ce;">
+                <center><b>EXPLORE GALLERY</b></center>
+            </h1>
+
+
+            <div class="intern2">
+                <div class="main2">
+
+                    <div class="card2">
+                        <div class="image2">
+                            <a href="file:///C:/Users/HP/Desktop/NPM%20INFOTECH/god_image_effect.html"><img
+                                    style="height: 400px;"
+                                    src="https://i.pinimg.com/236x/cf/ad/1a/cfad1a65a4ccc8592baa59812f53919e.jpg"></a>
+                        </div>
+                        <div class="bord2">
+                            <h4>God</h4>
+                        </div>
+                    </div>
+
+                    <div class="card2">
+                        <div class="image2">
+                            <a href="file:///C:/Users/HP/Desktop/NPM%20INFOTECH/nature_image_effect.html"><img
+                                    style="height: 400px;"
+                                    src="https://i.pinimg.com/236x/f0/95/38/f0953819d3b0a0266de4a92c070adaa5.jpg"></a>
+                        </div>
+                        <div class="bord2">
+                            <h4>Nature</h4>
+                        </div>
+                    </div>
+
+                    <div class="card2">
+                        <div class="image2">
+                            <A href="file:///C:/Users/HP/Desktop/NPM%20INFOTECH/animals_image_effect.html"><img
+                                    style="height: 400px;"
+                                    src="https://i.pinimg.com/236x/92/21/ba/9221ba65886d085ff1b76425d0139a9b.jpg">
+                            </A>
+                        </div>
+                        <div class="bord2">
+                            <h4>Animals</h4>
+                        </div>
+                    </div>
+
+                    <div class="card2">
+                        <div class="image2">
+                            <a href="file:///C:/Users/HP/Desktop/NPM%20INFOTECH/flower_image_effect.html"><img
+                                    style="height: 400px;"
+                                    src="https://i.pinimg.com/236x/8a/1c/98/8a1c98a698d2fdbf21fb12440fdac451.jpg"></a>
+                        </div>
+                        <div class="bord2">
+                            <h4>Flowers</h4>
+                        </div>
+                    </div>
+
+                    <div class="card2">
+                        <div class="image2">
+                            <a href="file:///C:/Users/HP/Desktop/NPM%20INFOTECH/bird_image_effect.html"><img
+                                    style="height: 400px;"
+                                    src="https://i.pinimg.com/736x/3e/c5/aa/3ec5aad83ff8bdb9608839b42fcc9667.jpg"></a>
+                        </div>
+                        <div class="bord2">
+                            <h4>Birds</h4>
+                        </div>
+                    </div>
+
+                    <div class="card2">
+                        <div class="image2">
+                            <a href="file:///C:/Users/HP/Desktop/NPM%20INFOTECH/quotes_image_effect.html"><img
+                                    style="height: 400px;"
+                                    src="https://i.pinimg.com/236x/2c/0d/d3/2c0dd3aa3eee3799d8c0855d64388333.jpg"></a>
+                        </div>
+                        <div class="bord2">
+                            <h4>Quotes</h4>
+                        </div>
+                    </div>
+
+
+                    <div class="card2">
+                        <div class="image2">
+                            <a href="file:///C:/Users/HP/Desktop/NPM%20INFOTECH/cartoon_image_effect.html"><img
+                                    style="height: 400px;"
+                                    src="https://i.pinimg.com/236x/4d/14/ab/4d14ab1cff6b26f11a99c58154817aa3.jpg">
+                        </div>
+                        <div class="bord2">
+                            <h4>Cartoon</h4>
+                        </div>
+                    </div>
+
+                    <div class="card2">
+                        <div class="image2">
+                            <a href="file:///C:/Users/HP/Desktop/NPM%20INFOTECH/drawing_image_effect.html"><img
+                                    style="height: 400px;"
+                                    src="https://i.pinimg.com/236x/8a/b8/db/8ab8db4beb72d05cfed15b689e2aa09c.jpg"></a>
+                        </div>
+                        <div class="bord2">
+                            <h4>Drawing</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <br><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br><br>
+        <br><br><br><br>
+
+
+        <!-- Footer -->
+        <div id="div4">
+            <footer class="text-center text-lg-start text-white"
+                style="background-color: #e47373ce; font-size: 18px; color: white;">
+                <br><br>
+                <section class="">
+                    <div class="container text-center text-md-start mt-5">
+                        <div class="row mt-2">
+                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                <h3 class=" fw-bold">Infotech Photogallery</h3>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: #e01b1b; height: 2px" />
+                                <p>
+                                    &emsp;&emsp;Photography is the art, application, and practice of creating durable images by
+                                    recording light, either electronically by means of an image sensor, or chemically by
+                                    means of a light-sensitive material such as photographic film.
+                                </p>
+                            </div>
+
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <!-- Links -->
+                                <h3 class=" fw-bold">Useful Links</h3>
+
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: #e01b1b; height: 2px" />
+                                <p>
+                                    <a href="#div1" style="color: white;">Home</a>
+                                </p>
+                                <p>
+                                    <a href="#div3" style="color: white;">Gallery</a>
+                                </p>
+                                <p>
+                                    <a href="#div2" style="color: white;">About us</a>
+                                </p>
+                                <p>
+                                    <a href="#!" style="color: white;">Contact Us</a>
+                                </p>
+                            </div>
+
+                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <!-- Links -->
+                                <h3 class=" fw-bold">Follow us on: </h3>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: #e01b1b; height: 2px" />
+                                <p>
+                                    <a href="#!" style="color: white;"><i class="fa fa-facebook-f">
+                                            &emsp13;</i>Facebook</a>
+                                </p>
+                                <p>
+                                    <a href="#!" style="color: white;"><i class="fa fa-linkedin">
+                                            &emsp13;</i>Linkedin</a>
+                                </p>
+                                <p>
+                                    <a href="#!" style="color: white;"><i class="fa fa-instagram">
+                                            &emsp13;</i>Instagram</a>
+                                </p>
+                                <p>
+                                    <a href="#!" style="color: white;"><i class="fa fa-twitter"> &emsp13;</i>Twitter</a>
+                                </p>
+                            </div>
+
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                <!-- Links -->
+                                <h3 class=" fw-bold">Contact</h3>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: #e01b1b; height: 2px" />
+                                <p><i class="fa fa-fw fa-home"></i> NPM Infotech, Ravet</p>
+                                <p><i class="	glyphicon glyphicon-envelope"></i> infotech@gmail.com</p>
+                                <p><i class="glyphicon glyphicon-phone"></i> +91 7867907689</p>
+                                <p><i class="glyphicon glyphicon-print"></i> +91 9867457683</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <br><br>
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                    © 2023 Copyright:
+                    <a class="text-white" href="https://mdbootstrap.com/">NPM.infotech.com</a>
+                </div>
+            </footer>
+
+        </div><!-- Footer -->
+
+</body>
+
+</html>

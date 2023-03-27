@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .myimages {
+            display: flex;
+            overflow: hidden;
+            height: 50vw;
+            background: #333;
+        }
+
+        .myimages img {
+            max-width: 100%;
+            vertical-align: middle;
+            border: 2px solid white;
+            box-sizing: border-box;
+            transition: opacity .2s;
+        }
+
+        .myimages:hover img {
+            opacity: 0.5;
+        }
+
+        .myimages img:hover {
+            opacity: 1;
+        }
+
+        .first-column {
+            animation: var(--animation, none) 16s infinite linear;
+        }
+
+        .first-column:hover {
+            animation-play-state: paused;
+        }
+
+        .first-column:nth-of-type(odd) {
+            align-self: flex-end;
+            --direction: 50%;
+        }
+
+        @keyframes slide {
+            to {
+                -webkit-transform: translateY(var(--direction, -50%));
+                transform: translateY(var(--direction, -50%));
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div class="myimages">
+        
+        <div class="first-column">
+            <a href="#"><img src="https://i.pinimg.com/236x/5e/13/79/5e13792616924164de88185ceb96cab4.jpg" alt="image"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/d9/04/4f/d9044f4a616ee87c3d5892acaf81786f.jpg"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/48/12/f5/4812f59f8cf6d8218e20dedb29c05390.jpg" alt="image"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/9c/63/66/9c6366f128b791dd793899eeb3399e52.jpg" alt="image"></a>
+        </div>
+        <div class="first-column">
+            <a href="#"><img src="https://i.pinimg.com/236x/30/c0/da/30c0daf7523ffcd6eb4241dbd4b670b2.jpg" alt="image"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/25/fb/38/25fb38e45668060cec2b9f321815195b.jpg" alt="image"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/ab/fe/6f/abfe6fb7aeda5e586e9edfe7099e81ba.jpg" alt="image"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/1b/dc/b6/1bdcb6d06faed3fba475f1d60d890660.jpg" alt="image"></a>
+        </div>
+        <div class="first-column">
+            <a href="#"><img src="https://i.pinimg.com/236x/25/fb/38/25fb38e45668060cec2b9f321815195b.jpg" alt="image"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/ed/39/87/ed3987f7253486a951f5d626e92fc709.jpg" alt="image"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/e4/bd/06/e4bd0626841d5472bb16941041562e7c.jpg" alt="image"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/25/a0/07/25a0076c486d95ec075f925aab88ba9d.jpg" alt="image"></a>
+        </div>
+        <div class="first-column">
+            <a href="#"><img src="https://i.pinimg.com/236x/08/19/28/081928ac8e0cefc3262a70e300384911.jpg" alt="image"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/bd/bd/4b/bdbd4b7b6e26fc0a7fe8f4bd44861a89.jpg" alt="image"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/bf/68/7f/bf687fc612bc4b374f33bcdd55397326.jpg" alt="image"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/f6/df/34/f6df34c6fbaa810ce6504c4b3b049453.jpg" alt="image"></a>
+        </div>
+        <div class="first-column">
+            <a href="#"><img src="https://i.pinimg.com/236x/68/09/df/6809dff26d080d5978d82c57a9bf6e0f.jpg" alt="image"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/d8/ce/f8/d8cef8f63a761ddd045a766958f12be1.jpg" alt="image"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/2f/34/1a/2f341a2d6ecfc19a3e6197adb8a3dd84.jpg" alt="image"></a>
+            <a href="#"><img src="https://i.pinimg.com/236x/33/ef/82/33ef82a03520373d1e69252bd98015cc.jpg" alt="image"></a>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+
+    $(document).ready(function () {
+
+        [...document.querySelectorAll('.first-column')].map(column => {
+            column.style.setProperty('--animation', 'slide');
+            column.style.setProperty('height', '200%');
+            column.innerHTML = column.innerHTML + column.innerHTML;
+        });
+
+    });
+</script>
